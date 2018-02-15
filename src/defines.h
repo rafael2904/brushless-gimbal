@@ -15,8 +15,15 @@
 	//#define BAUD 57600
 	#define MY_UBRR					(F_CPU/16/BAUD-1)
 	
-	#define cbi						(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit))
-	#define sbi						(sfr, bit) (_SFR_BYTE(sfr) |= _BV(bit))
+	//#define cbi						(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit))
+	//#define sbi						(sfr, bit) (_SFR_BYTE(sfr) |= _BV(bit))
+	#ifndef cbi
+	#define cbi(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit))
+	#endif
+	#ifndef sbi
+	#define sbi(sfr, bit) (_SFR_BYTE(sfr) |= _BV(bit))
+	#endif 
+	
 	#define pinChangeHigh			(reg, pin) (reg|=(1<<pin))
 	#define pinChangeLow			(reg, pin)  (reg&=~(1<<pin))
 	

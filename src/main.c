@@ -17,7 +17,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
-#include <time.h>
+//#include <time.h>
 
 uint8_t buffer[14];
 bool loop_bool=true;
