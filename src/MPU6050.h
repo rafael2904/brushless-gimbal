@@ -29,6 +29,6 @@ uint8_t mpu6050_readByte(uint8_t byteToRead);//readbyte
 void mpu6050_writeByte(uint8_t wereToWrite,uint8_t byteToWrite);
 int8_t mpu6050_readBytes(uint8_t regAddr, uint8_t length, uint8_t *data);
 void mpu6050_getRawData(int16_t* ax, int16_t* ay, int16_t* az, int16_t* gx, int16_t* gy, int16_t* gz);
-	void mpu6050_calibrate_gyro(int32_t *x,int32_t *y, int32_t *z);
-	void mpu6050_calibrate_accel(int32_t *x,int32_t *y, int32_t *z);
+void mpu6050_calibrate_gyro(int32_t *x,int32_t *y, int32_t *z);
+void mpu6050_calibrate_accel(int32_t *x,int32_t *y, int32_t *z);
 #endif
